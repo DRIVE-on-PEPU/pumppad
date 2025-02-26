@@ -38,12 +38,12 @@
       width: 80%;
       margin-top: 30px;
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.5rem; /* Increased size of the welcome text */
       box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     }
 
-    .highlight {
-      color: #ffb6c1; /* Light pink for "Real Human Beings" */
+    .intro-text strong {
+      font-weight: bold;
     }
 
     .token-avatar {
@@ -68,8 +68,8 @@
 
     .pulsing-box {
       position: absolute;
-      left: 55%;
-      top: 30%;
+      right: 20%;
+      top: 30%; /* Moved slightly further down */
       background-color: #ff0000; /* Rote Farbe */
       color: white;
       padding: 20px;
@@ -79,66 +79,51 @@
       text-align: center;
       box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
       animation: pulse 1.5s infinite; /* Pulsierende Animation */
-      transform: rotate(10deg); /* Slight right tilt */
+      transform: rotate(15deg); /* Schräg nach rechts geneigt */
       cursor: pointer;
       transition: transform 0.3s ease;
     }
 
     .pulsing-box:hover {
-      transform: rotate(10deg) scale(1.1);
+      transform: rotate(15deg) scale(1.1); /* Vergrößern bei Hover */
     }
 
     @keyframes pulse {
-      0% { opacity: 1; }
-      50% { opacity: 0.7; }
-      100% { opacity: 1; }
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+      }
     }
 
-    .button-container {
+    .scroll-arrows {
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin-top: 30px;
+      margin-top: 40px;
     }
 
-    .button img {
+    .arrow {
       width: 50px;
       height: 50px;
-    }
-
-    .launch-button {
-      background-color: #ffb6c1;
-      color: black;
-      font-size: 1.5rem;
-      padding: 15px;
-      border-radius: 10px;
-      border: none;
-      cursor: pointer;
-      transition: transform 0.3s ease;
-      margin-top: 20px;
-    }
-
-    .launch-button:hover {
-      transform: scale(1.1);
+      transform: rotate(90deg);
     }
 
     .section-header {
+      font-size: 2rem; /* Slightly larger */
+      font-family: 'Montserrat', sans-serif;
+      color: #ffd700;
       margin-top: 50px;
-      background: rgba(255, 182, 193, 0.3); /* Lighter pink background */
-      padding: 15px;
-      border-radius: 10px;
     }
 
-    .section-header img {
-      width: 70%;
-      display: block;
-      margin: 0 auto;
-    }
-
-    /* Box Layout */
+    /* New box layout */
     .box-container {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
       gap: 20px;
       margin-top: 20px;
       width: 80%;
@@ -151,18 +136,31 @@
       padding: 20px;
       text-align: center;
       font-size: 1.1rem;
-      height: 200px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      position: relative;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      height: 200px; /* Equal height for all boxes */
     }
 
     .small-box img {
-      width: 150px;
+      width: 120px; /* Increased size for images */
       height: auto;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
+    }
+
+    .small-box-text {
+      font-size: 1rem;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .button img {
+      width: 50px;
+      height: 50px;
     }
 
     .footer-text {
@@ -171,38 +169,58 @@
       text-align: center;
       margin-top: 50px;
     }
+
+    /* Custom button to play music */
+    #playButton {
+      background-color: #ff007f;
+      color: white;
+      font-size: 1.5rem;
+      padding: 20px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    #playButton:hover {
+      transform: scale(1.1);
+    }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="intro-text">
-      Welcome to the official $DRIVE token page. This is a community-driven meme coin where we're all 
-      <span class="highlight">Real Human Beings!</span>
-    </div>
-  </header>
-
+  <!-- Buttons moved to the top -->
   <div class="button-container">
     <a href="https://t.me/YOUR_TELEGRAM_LINK" class="button"><img src="https://ps.w.org/quadlayers-telegram-chat/assets/icon-256x256.jpg?rev=2911699" alt="Telegram"></a>
     <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYihq0lVLoSaPDfuQdCbOFmXTmooWC_5CCNA&s" alt="Pumppad"></a>
   </div>
 
-  <button id="launchButton" class="launch-button">CLICK HERE TO LAUNCH ENGINE</button>
+  <header>
+    <div class="intro-text">
+      <strong>When Ryan Gosling said, “I drive,” he meant straight to the MOON, baby! 🌕</strong><br><br>
+      Welcome to the official $DRIVE token page. This is a <strong>community-driven</strong> meme coin, so get in the car!
+    </div>
+  </header>
 
   <img src="https://i.imgur.com/U5XaaPi.png" alt="Token Avatar" class="token-avatar">
 
   <img src="https://i.imgur.com/s1BSkhB.png" alt="Drive Logo" class="drive-logo">
   <img src="https://i.imgur.com/Von2iFS.png" alt="To the Moon Logo" class="moon-logo">
 
-  <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="pulsing-box">BUY NOW!</a>
+  <div class="scroll-arrows">
+    <img src="https://img.icons8.com/ios/50/ffffff/arrow.png" class="arrow" alt="Scroll Down Arrow">
+    <img src="https://img.icons8.com/ios/50/ffffff/arrow.png" class="arrow" alt="Scroll Down Arrow">
+  </div>
+
+  <hr>
 
   <div class="section-header">
-    <img src="https://imgur.com/gNkRjrs.png" alt="Our Escape Route">
+    <img src="https://imgur.com/gNkRjrs.png" alt="Our Escape Route" style="width: 60%; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
   </div>
 
   <div class="box-container">
     <div class="small-box">
-      <img src="https://imgur.com/gHRs0Kl.png" alt="Real Human Beings">
+      <img src="https://i.imgur.com/UZ1dgL7.png" alt="Community">
       <div class="small-box-text">This is the core of our project, where we grow together.</div>
     </div>
     <div class="small-box">
@@ -213,30 +231,38 @@
       <img src="https://i.imgur.com/h01H3Tn.png" alt="Promise">
       <div class="small-box-text">Our only promise: real growth and community spirit.</div>
     </div>
+    <div class="small-box">
+      <img src="https://i.imgur.com/b2a9Qd5.png" alt="Honesty">
+      <div class="small-box-text">No rugpulls, no lies. We’re here for the long run.</div>
+    </div>
+    <div class="small-box">
+      <img src="https://i.imgur.com/YpGmi6q.png" alt="Power">
+      <div class="small-box-text">We hold the power over the market, not the whales.</div>
+    </div>
+    <div class="small-box">
+      <img src="https://i.imgur.com/6Dkd9ps.png" alt="Wisdom">
+      <div class="small-box-text">We invest wisely—only what we can afford, no gambling.</div>
+    </div>
   </div>
 
   <div class="footer-text">
     If you haven't seen the film, do so, it's amazing.
   </div>
 
+  <!-- Play Button -->
+  <div class="button-container">
+    <button id="playButton">CLICK HERE, TO LAUNCH ENGINE:</button>
+  </div>
+
   <audio id="audioPlayer">
     <source src="https://raw.githubusercontent.com/DRIVE-on-PEPU/pumppad/main/College%20&%20Electric%20Youth%20-%20A%20Real%20Hero%20(Drive%20Original%20Movie%20Soundtrack).mp3" type="audio/mp3">
+    Ihr Browser unterstützt das Audio-Element nicht.
   </audio>
 
   <script>
-    const launchButton = document.getElementById('launchButton');
-    const audio = document.getElementById('audioPlayer');
-
-    launchButton.addEventListener('click', function() {
-      if (audio.paused) {
-        audio.play();
-        launchButton.textContent = "CLICK HERE TO STOP ENGINE";
-        window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-      } else {
-        audio.pause();
-        audio.currentTime = 0;
-        launchButton.textContent = "CLICK HERE TO LAUNCH ENGINE";
-      }
+    document.getElementById('playButton').addEventListener('click', function() {
+      var audio = document.getElementById('audioPlayer');
+      audio.play();
     });
   </script>
 
