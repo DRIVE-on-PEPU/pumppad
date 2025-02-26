@@ -18,6 +18,7 @@
       align-items: center;
     }
 
+    /* Header */
     header {
       width: 100%;
       text-align: center;
@@ -31,6 +32,7 @@
       align-items: center;
     }
 
+    /* Begrüßungsbox */
     .intro-text {
       background: rgba(0, 0, 0, 0.7); /* Darker background to make the text stand out more */
       padding: 30px;
@@ -46,6 +48,7 @@
       font-weight: bold;
     }
 
+    /* Token Avatar */
     .token-avatar {
       width: 400px; /* 4x larger */
       height: 400px;
@@ -54,18 +57,34 @@
       border: 5px solid #fff;
     }
 
+    /* Drive Logo */
     .drive-logo {
       width: 500px;
       position: relative;
       top: -20px; /* Slight overlap */
     }
 
+    /* To the Moon Logo */
     .moon-logo {
       width: 350px;
       position: relative;
       top: -20px;
     }
 
+    /* Button Container */
+    .button-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 50px;
+    }
+
+    .button img {
+      width: 50px;
+      height: 50px;
+    }
+
+    /* Pulsing Engine Button */
     .pulsing-box {
       position: absolute;
       right: 20%;
@@ -100,6 +119,7 @@
       }
     }
 
+    /* Scroll Arrows */
     .scroll-arrows {
       display: flex;
       justify-content: center;
@@ -113,6 +133,7 @@
       transform: rotate(90deg);
     }
 
+    /* Our Escape Route */
     .section-header {
       font-size: 2rem; /* Slightly larger */
       font-family: 'Montserrat', sans-serif;
@@ -120,7 +141,7 @@
       margin-top: 50px;
     }
 
-    /* New box layout */
+    /* Box Layout */
     .box-container {
       display: grid;
       grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
@@ -151,18 +172,7 @@
       font-size: 1rem;
     }
 
-    .button-container {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 50px;
-    }
-
-    .button img {
-      width: 50px;
-      height: 50px;
-    }
-
+    /* Footer Text */
     .footer-text {
       font-size: 1.2rem;
       color: white;
@@ -170,9 +180,9 @@
       margin-top: 50px;
     }
 
-    /* Custom button to play music */
+    /* Custom Button to play music */
     #playButton {
-      background-color: #ff007f;
+      background-color: #ff66b2;
       color: white;
       font-size: 1.5rem;
       padding: 20px;
@@ -185,42 +195,59 @@
     #playButton:hover {
       transform: scale(1.1);
     }
+
   </style>
 </head>
 <body>
 
-  <!-- Buttons moved to the top -->
+  <!-- Header -->
+  <header>
+    <div class="intro-text">
+      <strong>When Ryan Gosling said, “I drive,” he meant straight to the MOON, baby! 🌕</strong><br><br>
+      Welcome to the official <span style="color: #ff007f;">$DRIVE</span> token page. This is a community-driven meme coin where we're all <span style="color: #ff007f;">Real Human Beings</span>!
+    </div>
+  </header>
+
+  <!-- Button-Container (Telegram and Pumppad Buttons) -->
   <div class="button-container">
     <a href="https://t.me/YOUR_TELEGRAM_LINK" class="button"><img src="https://ps.w.org/quadlayers-telegram-chat/assets/icon-256x256.jpg?rev=2911699" alt="Telegram"></a>
     <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYihq0lVLoSaPDfuQdCbOFmXTmooWC_5CCNA&s" alt="Pumppad"></a>
   </div>
 
-  <header>
-    <div class="intro-text">
-      <strong>When Ryan Gosling said, “I drive,” he meant straight to the MOON, baby! 🌕</strong><br><br>
-      Welcome to the official $DRIVE token page. This is a <strong>community-driven</strong> meme coin, so get in the car!
-    </div>
-  </header>
+  <!-- "CLICK HERE TO LAUNCH ENGINE" Button -->
+  <div class="button-container">
+    <button id="engineButton" style="background-color: #ff66b2; color: white; font-size: 1.5rem; padding: 20px; border-radius: 10px; border: none; cursor: pointer; transition: transform 0.3s ease;">CLICK HERE TO LAUNCH ENGINE</button>
+  </div>
 
+  <!-- BUY NOW! Button -->
+  <div class="button-container">
+    <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="button" style="transform: rotate(10deg); text-align: center;">BUY NOW!</a>
+  </div>
+
+  <!-- Token Avatar -->
   <img src="https://i.imgur.com/U5XaaPi.png" alt="Token Avatar" class="token-avatar">
 
+  <!-- Drive Logo -->
   <img src="https://i.imgur.com/s1BSkhB.png" alt="Drive Logo" class="drive-logo">
+
+  <!-- To the Moon Logo -->
   <img src="https://i.imgur.com/Von2iFS.png" alt="To the Moon Logo" class="moon-logo">
 
+  <!-- Scroll-Pfeile -->
   <div class="scroll-arrows">
     <img src="https://img.icons8.com/ios/50/ffffff/arrow.png" class="arrow" alt="Scroll Down Arrow">
     <img src="https://img.icons8.com/ios/50/ffffff/arrow.png" class="arrow" alt="Scroll Down Arrow">
   </div>
 
-  <hr>
-
+  <!-- Our Escape Route Image -->
   <div class="section-header">
-    <img src="https://imgur.com/gNkRjrs.png" alt="Our Escape Route" style="width: 60%; margin-top: 20px; display: block; margin-left: auto; margin-right: auto;">
+    <img src="https://imgur.com/gNkRjrs.png" alt="Our Escape Route" style="width: 90%; margin-top: 20px; display: block; margin-left: auto; margin-right: auto; opacity: 0.7; filter: brightness(0.7);">
   </div>
 
+  <!-- Box-Container (6 Boxen in 2x3-Grid) -->
   <div class="box-container">
     <div class="small-box">
-      <img src="https://i.imgur.com/UZ1dgL7.png" alt="Community">
+      <img src="https://i.imgur.com/gHRs0Kl.png" alt="Real Human Beings">
       <div class="small-box-text">This is the core of our project, where we grow together.</div>
     </div>
     <div class="small-box">
@@ -245,24 +272,38 @@
     </div>
   </div>
 
+  <!-- Footer-Text -->
   <div class="footer-text">
     If you haven't seen the film, do so, it's amazing.
   </div>
 
-  <!-- Play Button -->
-  <div class="button-container">
-    <button id="playButton">CLICK HERE, TO LAUNCH ENGINE:</button>
-  </div>
-
+  <!-- Audio Player -->
   <audio id="audioPlayer">
     <source src="https://raw.githubusercontent.com/DRIVE-on-PEPU/pumppad/main/College%20&%20Electric%20Youth%20-%20A%20Real%20Hero%20(Drive%20Original%20Movie%20Soundtrack).mp3" type="audio/mp3">
     Ihr Browser unterstützt das Audio-Element nicht.
   </audio>
 
   <script>
-    document.getElementById('playButton').addEventListener('click', function() {
-      var audio = document.getElementById('audioPlayer');
-      audio.play();
+    var audio = document.getElementById('audioPlayer');
+    var engineButton = document.getElementById('engineButton');
+    var isPlaying = false;
+
+    engineButton.addEventListener('click', function() {
+      if (!isPlaying) {
+        audio.play();
+        engineButton.textContent = "CLICK HERE TO STOP ENGINE";
+        isPlaying = true;
+
+        // Scroll langsam nach unten
+        window.scrollTo({
+          top: document.body.scrollHeight,
+          behavior: 'smooth'
+        });
+      } else {
+        audio.pause();
+        engineButton.textContent = "CLICK HERE TO LAUNCH ENGINE";
+        isPlaying = false;
+      }
     });
   </script>
 
