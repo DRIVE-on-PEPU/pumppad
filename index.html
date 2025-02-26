@@ -59,10 +59,10 @@ header {
     /* BUY NOW! Button */
 @keyframes pulse {
   0% {
-    transform: scale(1) rotate(20deg);
+    transform: scale(1) rotate(20deg); /* Dauerhafte Rotation */
   }
   50% {
-    transform: scale(1.1) rotate(20deg); /* Button wächst leicht */
+    transform: scale(1.2) rotate(20deg); /* Pulsierende Bewegung */
   }
   100% {
     transform: scale(1) rotate(20deg);
@@ -78,17 +78,18 @@ header {
   border-radius: 10px;
   text-align: center;
   position: absolute;
-  left: calc(50% + 250px); /* Platziert den Button 200px rechts von der Mitte */
-  top: calc(20% + 125px); /* Verschiebt den Button um 125px nach unten */
+  left: calc(50% + 250px); /* 250px rechts von der Mitte */
+  top: calc(20% + 125px); /* 125px weiter unten */
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
   animation: pulse 1.5s infinite; /* Pulsierende Animation */
+  transform: rotate(20deg); /* Standardmäßige Rotation */
 }
 
-    .buy-now-button:hover {
-      transform: rotate(25deg) scale(1.1);
-      background-color: #ff007f;
-    }
+.buy-now-button:hover {
+  transform: scale(1.1) rotate(20deg); /* Kein zusätzliches Drehen beim Hover */
+  background-color: #ff007f;
+}
 
     /* Token Avatar */
     .token-avatar {
@@ -113,27 +114,27 @@ header {
       top: -20px;
     }
 
-/* Button-Container innerhalb des Headers */
-header .button-container {
+/* Engine Button außerhalb des Headers */
+.engine-button-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-top: 20px;
+  margin-top: 50px; /* Erhöht den Abstand nach unten */
 }
 
 #engineButton {
   background-color: #ff66b2;
   color: white;
-  font-size: 1.5rem;
-  padding: 20px;
-  border-radius: 10px;
+  font-size: 2rem; /* Button größer */
+  padding: 25px 40px; /* Größere Klickfläche */
+  border-radius: 15px;
   border: none;
   cursor: pointer;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 #engineButton:hover {
   transform: scale(1.1);
+  background-color: #ff007f; /* Etwas kräftigere Farbe beim Hover */
 }
     
     .button img {
