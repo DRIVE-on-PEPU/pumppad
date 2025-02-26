@@ -363,6 +363,7 @@ var scrollAnimationFrameId = null; // Variable to store the requestAnimationFram
 engineButton.addEventListener('click', function() {
   if (!isPlaying) {
     audio.currentTime = 12; // Song starts at 12 seconds
+    audio.volume = 0.25; // Lautstärke auf 25% setzen
     audio.play();
     engineButton.textContent = "CLICK HERE TO STOP ENGINE";
     isPlaying = true;
