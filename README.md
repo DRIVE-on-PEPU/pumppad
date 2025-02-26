@@ -1,12 +1,6 @@
 # $DRIVE on PEPU Pumppad 🚗💨  
 
-Welcome to the official **$DRIVE** token page, inspired by the legendary film *Drive* (2011). This is a **community-driven** meme coin with no gimmicks—just vibes, growth, and the open road ahead.  
-
-## 🚀 The Look & Feel  
-This site is designed with the **Drive aesthetic** in mind:  
-✅ **Colors:** White, Gold, and Neon Pink 🌟  
-✅ **Minimalist yet stylish, just like The Driver himself**  
-✅ **Smooth, modern, and straight to the point**  
+Welcome to the official **$DRIVE** token page, inspired by the legendary film *Drive* (2011). This is a **community-driven** meme, so get in the car!  
 
 ---
 
@@ -16,17 +10,17 @@ This site is designed with the **Drive aesthetic** in mind:
   <strong>When Ryan Gosling said, “I drive,” he meant straight to the MOON, baby!</strong><br><br>
   Hello community, this is Benjamin. I’m the token’s creator and an active community member. If you’ve been around $MATRIX or other projects, you might’ve seen my name before.  
   <br><br>
-  1️⃣ $DRIVE is a community token inspired by the legendary cult film Drive.  
+  1️⃣ $DRIVE is a community token inspired by the legendary cult film Drive (my personal favorite).  
   <br>
   2️⃣ This is a simple, honest meme coin: no gimmicks, no utility plans (for now).  
   <br>
   3️⃣ The only promise is that this is a **real community project**, and we'll decide together how it plays out.  
   <br>
-  4️⃣ I’m not here to rugpull people for 700 PEPU—that’s gigacringe behavior that **hurts the community and the ecosystem** we want to grow.  
+  4️⃣ I’m not here to rugpull people for 700 PEPU. That’s gigacringe behavior that **hurts the community and the ecosystem** we want to grow and succeed.  
   <br>
-  5️⃣ If you’re on the same wavelength, hop in early and let’s drive this getaway car straight to the M🌕🌕N!  
+  5️⃣ If you’re on the same wavelength, hop in early and let’s drive this getaway car straight to the MOOOOON!  
   <br><br>
-  🆕🅼🅿🅾🆁🆃🅰🅽🆃 Please only invest what you can afford. After aping in, join our Telegram and say hello!  
+  ⚠️ Please only invest what you can afford. BUY NOW, and join our Telegram to say hello! ⚠️
 </div>
 
 ---
@@ -42,10 +36,8 @@ This site is designed with the **Drive aesthetic** in mind:
 ---
 
 ## ⚙️ **How to Contribute**
-- If you like $DRIVE, spread the word.  
-- Open issues or PRs to improve the site.  
-- No roadmap, no fake promises—just community-driven vibes.  
-
+- If you like $DRIVE, spread the word in the Pumppad Telegram Group. 
+- Everybody can take responsibilty, contribute something awesome and put out ideas. We are a **community**, and this is **our** token.
 ---
 
-🔥 **Buckle up, no brakes, only moon.** 🚀
+🔥 **Buckle up, no brakes, only moon.** 🚗🚀
