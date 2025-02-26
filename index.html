@@ -321,41 +321,56 @@
   </audio>
 
   <script>
-    var audio = document.getElementById('audioPlayer');
-    var engineButton = document.getElementById('engineButton');
-    var isPlaying = false;
+var audio = document.getElementById('audioPlayer');
+var engineButton = document.getElementById('engineButton');
+var isPlaying = false;
+var scrollAnimationFrameId = null; // Variable to store the requestAnimationFrame ID
 
-    engineButton.addEventListener('click', function() {
-      if (!isPlaying) {
-        audio.currentTime = 12; // Song starts at 12 seconds
-        audio.play();
-        engineButton.textContent = "CLICK HERE TO STOP ENGINE";
-        isPlaying = true;
+engineButton.addEventListener('click', function() {
+  if (!isPlaying) {
+    audio.currentTime = 12; // Song starts at 12 seconds
+    audio.play();
+    engineButton.textContent = "CLICK HERE TO STOP ENGINE";
+    isPlaying = true;
 
-        // Langsame Scroll-Animation
-        scrollToBottomSmoothly();
-      } else {
-        audio.pause();
-        engineButton.textContent = "CLICK HERE TO LAUNCH ENGINE";
-        isPlaying = false;
-      }
-    });
+    // Langsame Scroll-Animation starten
+    scrollToBottomSmoothly();
+  } else {
+    audio.pause();
+    engineButton.textContent = "CLICK HERE TO LAUNCH ENGINE";
+    isPlaying = false;
 
-    function scrollToBottomSmoothly() {
-      var scrollHeight = document.body.scrollHeight;
-      var currentScroll = window.scrollY;
-      var scrollStep = (scrollHeight - currentScroll) / 5000; // Extremely slow scroll, very small step
+    // Scrollen stoppen, wenn der Button erneut gedrückt wird
+    cancelAnimationFrame(scrollAnimationFrameId);
+  }
+});
 
-      function scrollStepFn() {
-        if (currentScroll < scrollHeight) {
-          currentScroll += scrollStep;
-          window.scrollTo(0, currentScroll);
-          requestAnimationFrame(scrollStepFn);
-        }
-      }
+// Funktion für langsames Scrollen
+function scrollToBottomSmoothly() {
+  var scrollHeight = document.body.scrollHeight;
+  var currentScroll = window.scrollY;
+  var scrollStep = (scrollHeight - currentScroll) / 5000; // Sehr langsames Scrollen, sehr kleiner Schritt
 
-      requestAnimationFrame(scrollStepFn);
+  function scrollStepFn() {
+    if (currentScroll < scrollHeight) {
+      currentScroll += scrollStep;
+      window.scrollTo(0, currentScroll);
+      scrollAnimationFrameId = requestAnimationFrame(scrollStepFn); // Speichert die ID der laufenden Animation
     }
+  }
+
+  scrollAnimationFrameId = requestAnimationFrame(scrollStepFn); // Startet die Scroll-Animation
+}
+
+// Abbruch des Scrollens, wenn der Nutzer selbst scrollt
+window.addEventListener('wheel', function() {
+  cancelAnimationFrame(scrollAnimationFrameId); // Stoppt die Scroll-Animation, wenn der Nutzer scrollt
+});
+
+window.addEventListener('touchstart', function() {
+  cancelAnimationFrame(scrollAnimationFrameId); // Stoppt die Scroll-Animation, wenn der Nutzer scrollt
+});
+
   </script>
 
 </body>
