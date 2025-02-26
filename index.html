@@ -366,7 +366,6 @@ header .button img:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 20px; /* Abstand zum Oberen
   margin-bottom: 20px; /* Abstand zum unteren "BUY NOW" Button */
 }
 
@@ -377,12 +376,9 @@ header .button img:hover {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5); /* Leuchtender Effekt */
 }
 
-.bag-text {
-  font-size: 2rem;
-  font-weight: bold;
-  color: white;
-  margin-top: 10px; /* Abstand zwischen Bild und Text */
-  text-align: center;
+.bag-text-image {
+  width: 250px; /* Anpassbare Breite für den Schriftzug */
+  margin-top: 10px; /* Abstand zwischen dem oberen Bild und dem Schriftzug */
 }
     
     /* Footer Text */
@@ -492,11 +488,12 @@ header .button img:hover {
     </div>
   </div>
 
-<!-- Bild mit weißem Rahmen + "Securing the Bag..." Schriftzug -->
+<!-- Bild mit weißem Rahmen + Schriftzug als PNG -->
 <div class="bag-container">
-    <img src="https://i.imgur.com/OLYHAQ9.jpeg" alt="Securing the Bag" class="bag-image">
-    <div class="bag-text">Securing the Bag...</div>
+    <img src="https://i.imgur.com/wW9q5FZ.png" alt="Securing the Bag" class="bag-image">
+    <img src="https://i.imgur.com/pODYkFg.png" alt="Securing the Bag..." class="bag-text-image">
 </div>
+
   
 <!-- BUY NOW! Button at the Bottom -->
 <div class="buy-now-bottom-container">
