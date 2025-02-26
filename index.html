@@ -336,20 +336,20 @@
     });
 
     function scrollToBottomSmoothly() {
-      var scrollHeight = document.body.scrollHeight;
-      var currentScroll = window.scrollY;
-      var scrollStep = (scrollHeight - currentScroll) / 100; // Adjust the scroll speed (larger divisor = slower scroll)
+  var scrollHeight = document.body.scrollHeight;
+  var currentScroll = window.scrollY;
+  var scrollStep = (scrollHeight - currentScroll) / 1000; // Sehr langsames Scrollen, sehr kleiner Schritt
 
-      function scrollStepFn() {
-        if (currentScroll < scrollHeight) {
-          currentScroll += scrollStep;
-          window.scrollTo(0, currentScroll);
-          requestAnimationFrame(scrollStepFn);
-        }
-      }
-
+  function scrollStepFn() {
+    if (currentScroll < scrollHeight) {
+      currentScroll += scrollStep;
+      window.scrollTo(0, currentScroll);
       requestAnimationFrame(scrollStepFn);
     }
+  }
+
+  requestAnimationFrame(scrollStepFn);
+}
   </script>
 
 </body>
