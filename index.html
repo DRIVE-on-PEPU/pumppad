@@ -38,7 +38,7 @@ header {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.15); /* Vergrößern um 15% */
   }
   100% {
     transform: scale(1);
@@ -94,13 +94,13 @@ header {
     /* BUY NOW! Button */
 @keyframes pulse {
   0% {
-    transform: scale(1) rotate(20deg); /* Dauerhafte Rotation */
+    transform: scale(1);
   }
   50% {
-    transform: scale(1.2) rotate(20deg); /* Pulsierende Bewegung */
+    transform: scale(1.15); /* Vergrößern um 15% */
   }
   100% {
-    transform: scale(1) rotate(20deg);
+    transform: scale(1);
   }
 }
 
@@ -161,7 +161,7 @@ header {
     transform: scale(1);
   }
   50% {
-    transform: scale(1.1);
+    transform: scale(1.15); /* Vergrößern um 15% */
   }
   100% {
     transform: scale(1);
@@ -180,7 +180,7 @@ header {
   transition: transform 0.3s ease;
   margin-top: 0; /* Entfernt das unnötige nach unten Schieben */
   position: relative;
-  top: -20px; /* Falls nötig, kannst du hier Feintuning mit px-Werten machen */
+  top: 0px; /* Falls nötig, kannst du hier Feintuning mit px-Werten machen */
 }
 
 /* Add this class for pulsating effect */
@@ -226,17 +226,17 @@ header .button img:hover {
       transform: rotate(15deg) scale(1.1); /* Vergrößern bei Hover */
     }
 
-    @keyframes pulse {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0.7;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15); /* Vergrößern um 15% */
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 
 /* Container für die Pfeile + Engine-Button */
 .engine-button-container {
