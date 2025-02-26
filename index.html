@@ -178,7 +178,9 @@ header {
   border: none;
   cursor: pointer;
   transition: transform 0.3s ease;
-  margin-top: 120px;
+  margin-top: 0; /* Entfernt das übermäßige Verschieben nach unten */
+  position: relative;
+  top: 0; /* Falls nötig, kannst du hier mit negativen Werten noch feintunen */
 }
 
 /* Add this class for pulsating effect */
