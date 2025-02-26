@@ -33,6 +33,30 @@ header {
   position: relative;
 }
 
+@keyframes arrowMove {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  50% {
+    transform: scale(1.15) translateX(-10px); /* Linker Pfeil bewegt sich nach links */
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+
+@keyframes arrowMoveRight {
+  0% {
+    transform: scale(1) translateX(0);
+  }
+  50% {
+    transform: scale(1.15) translateX(10px); /* Rechter Pfeil bewegt sich nach rechts */
+  }
+  100% {
+    transform: scale(1) translateX(0);
+  }
+}
+    
 @keyframes pulse {
   0% {
     transform: scale(1);
@@ -265,11 +289,18 @@ header .button img:hover {
 }
 
 /* Pfeile links und rechts */
-.arrow-left, .arrow-right {
-  font-size: 3rem; /* Größe der Pfeile */
+.arrow-left {
+  font-size: 3rem;
   font-weight: bold;
   color: white;
-  animation: arrowBlink 1.5s infinite alternate;
+  animation: arrowMove 1.5s infinite alternate; /* Linker Pfeil bewegt sich nach links */
+}
+
+.arrow-right {
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  animation: arrowMoveRight 1.5s infinite alternate; /* Rechter Pfeil bewegt sich nach rechts */
 }
 
 /* Blinke-Animation für Pfeile */
