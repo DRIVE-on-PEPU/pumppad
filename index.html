@@ -24,12 +24,19 @@
       text-align: center;
       padding: 40px 0;
       background: rgba(0, 0, 0, 0.6); /* Dark overlay for header */
-      font-size: 4rem; /* Larger font size for the welcome text */
+      font-size: 3rem; /* Larger font size for the welcome text */
       font-family: 'Montserrat', sans-serif;
       color: white;
       display: flex;
       justify-content: center;
       align-items: center;
+    }
+
+    /* Überschrift im Header */
+    header h1 {
+      font-size: 3.5rem;
+      color: white;
+      font-weight: bold;
     }
 
     /* Begrüßungsbox */
@@ -46,6 +53,28 @@
 
     .intro-text strong {
       font-weight: bold;
+    }
+
+    /* BUY NOW! Button */
+    .buy-now-button {
+      background-color: #ff0000;
+      color: white;
+      font-size: 2.5rem;
+      font-weight: bold;
+      padding: 30px;
+      border-radius: 10px;
+      text-align: center;
+      transform: rotate(20deg); /* Further tilted */
+      position: absolute;
+      right: 15%;
+      top: 10%;
+      cursor: pointer;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+    }
+
+    .buy-now-button:hover {
+      transform: rotate(20deg) scale(1.1);
+      background-color: #ff007f;
     }
 
     /* Token Avatar */
@@ -202,11 +231,14 @@
 
   <!-- Header -->
   <header>
-    <div class="intro-text">
-      <strong>When Ryan Gosling said, “I drive,” he meant straight to the MOON, baby! 🌕</strong><br><br>
-      Welcome to the official <span style="color: #ff007f;">$DRIVE</span> token page. This is a community-driven meme coin where we're all <span style="color: #ff007f;">Real Human Beings</span>!
-    </div>
+    <h1>$DRIVE on PEPU</h1>
   </header>
+
+  <!-- Begrüßungsbox -->
+  <div class="intro-text">
+    <strong>When Ryan Gosling said, “I drive,” he meant straight to the MOON, baby! 🌕</strong><br><br>
+    Welcome to the official <span style="color: #ff007f;">$DRIVE</span> token page. This is a community-driven meme coin where we're all <span style="color: #ff007f;">Real Human Beings</span>!
+  </div>
 
   <!-- Button-Container (Telegram and Pumppad Buttons) -->
   <div class="button-container">
@@ -221,7 +253,7 @@
 
   <!-- BUY NOW! Button -->
   <div class="button-container">
-    <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="button" style="transform: rotate(10deg); text-align: center;">BUY NOW!</a>
+    <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="buy-now-button">BUY NOW!</a>
   </div>
 
   <!-- Token Avatar -->
@@ -241,7 +273,7 @@
 
   <!-- Our Escape Route Image -->
   <div class="section-header">
-    <img src="https://imgur.com/gNkRjrs.png" alt="Our Escape Route" style="width: 90%; margin-top: 20px; display: block; margin-left: auto; margin-right: auto; opacity: 0.7; filter: brightness(0.7);">
+    <img src="https://imgur.com/gNkRjrs.png" alt="Our Escape Route" style="width: 90%; margin-top: 20px; display: block; margin-left: auto; margin-right: auto; opacity: 0.9; filter: brightness(1.2);">
   </div>
 
   <!-- Box-Container (6 Boxen in 2x3-Grid) -->
@@ -294,17 +326,30 @@
         engineButton.textContent = "CLICK HERE TO STOP ENGINE";
         isPlaying = true;
 
-        // Scroll langsam nach unten
-        window.scrollTo({
-          top: document.body.scrollHeight,
-          behavior: 'smooth'
-        });
+        // Langsame Scroll-Animation
+        scrollToBottomSmoothly();
       } else {
         audio.pause();
         engineButton.textContent = "CLICK HERE TO LAUNCH ENGINE";
         isPlaying = false;
       }
     });
+
+    function scrollToBottomSmoothly() {
+      var scrollHeight = document.body.scrollHeight;
+      var currentScroll = window.scrollY;
+      var scrollStep = (scrollHeight - currentScroll) / 100; // Adjust the scroll speed (larger divisor = slower scroll)
+
+      function scrollStepFn() {
+        if (currentScroll < scrollHeight) {
+          currentScroll += scrollStep;
+          window.scrollTo(0, currentScroll);
+          requestAnimationFrame(scrollStepFn);
+        }
+      }
+
+      requestAnimationFrame(scrollStepFn);
+    }
   </script>
 
 </body>
