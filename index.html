@@ -134,7 +134,7 @@ header {
 
 #engineButton:hover {
   transform: scale(1.1);
-  background-color: #ff007f; /* Etwas kräftigere Farbe beim Hover */
+  background-color: #ff007f;
 }
     
     .button img {
@@ -177,16 +177,16 @@ header {
       }
     }
 
-/* Pfeile, die auf den Engine-Button zeigen */
-.engine-arrows {
+/* Container für die Pfeile + Engine-Button */
+.engine-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 100px; /* Abstand zwischen den Pfeilen und dem Button */
-  margin-bottom: 10px;
-  margin-top: 20px; /* Abstand zum Header */
+  gap: 40px; /* Abstand zwischen Pfeilen und Button */
+  margin-top: 50px; /* Abstand zum Header */
 }
 
+/* Pfeile links und rechts */
 .arrow-left, .arrow-right {
   font-size: 3rem; /* Größe der Pfeile */
   font-weight: bold;
@@ -308,10 +308,11 @@ header {
   <!-- To the Moon Logo -->
   <img src="https://i.imgur.com/Von2iFS.png" alt="To the Moon Logo" class="moon-logo">
 
-<!-- Pfeile, die auf den Engine-Button zeigen -->
-<div class="engine-arrows">
-    <span class="arrow-left">&#8592;</span> <!-- Pfeil nach rechts -->
-    <span class="arrow-right">&#8594;</span> <!-- Pfeil nach links -->
+<!-- Pfeile + Engine-Button in einer flexiblen Zeile -->
+<div class="engine-container">
+    <span class="arrow-left">&#8592;</span> <!-- Pfeil links -->
+    <button id="engineButton">CLICK HERE TO LAUNCH ENGINE</button>
+    <span class="arrow-right">&#8594;</span> <!-- Pfeil rechts -->
 </div>
 
   <!-- Our Escape Route Image -->
