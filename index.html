@@ -177,19 +177,32 @@ header {
       }
     }
 
-    /* Scroll Arrows */
-    .scroll-arrows {
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      margin-top: 40px;
-    }
+/* Pfeile, die auf den Engine-Button zeigen */
+.engine-arrows {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px; /* Abstand zwischen den Pfeilen und dem Button */
+  margin-bottom: 10px;
+  margin-top: 20px; /* Abstand zum Header */
+}
 
-    .arrow {
-      width: 50px;
-      height: 50px;
-      transform: rotate(90deg);
-    }
+.arrow-left, .arrow-right {
+  font-size: 3rem; /* Größe der Pfeile */
+  font-weight: bold;
+  color: white;
+  animation: arrowBlink 1.5s infinite alternate;
+}
+
+/* Blinke-Animation für Pfeile */
+@keyframes arrowBlink {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
 
     /* Our Escape Route */
     .section-header {
@@ -295,11 +308,11 @@ header {
   <!-- To the Moon Logo -->
   <img src="https://i.imgur.com/Von2iFS.png" alt="To the Moon Logo" class="moon-logo">
 
-  <!-- Scroll-Pfeile -->
-  <div class="scroll-arrows">
-    <span class="arrow-fat">&#8592;</span>
-    <span class="arrow-fat">&#8594;</span>
-  </div>
+<!-- Pfeile, die auf den Engine-Button zeigen -->
+<div class="engine-arrows">
+    <span class="arrow-left">&#8592;</span> <!-- Pfeil nach rechts -->
+    <span class="arrow-right">&#8594;</span> <!-- Pfeil nach links -->
+</div>
 
   <!-- Our Escape Route Image -->
   <div class="section-header">
