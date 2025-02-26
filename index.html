@@ -30,6 +30,7 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      position: relative;
     }
 
     /* Überschrift im Header */
@@ -66,8 +67,8 @@
       text-align: center;
       transform: rotate(20deg); /* Further tilted */
       position: absolute;
-      right: 15%;
-      top: 10%;
+      right: 10%; /* Slightly adjusted to the right */
+      top: 15%; /* Position it above the avatar */
       cursor: pointer;
       transition: transform 0.3s ease, background-color 0.3s ease;
     }
@@ -106,6 +107,9 @@
       justify-content: center;
       gap: 20px;
       margin-top: 50px;
+      position: absolute;
+      top: 100px;
+      width: 100%;
     }
 
     .button img {
@@ -225,6 +229,13 @@
       transform: scale(1.1);
     }
 
+    /* Arrow styling */
+    .arrow-fat {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #fff;
+    }
+
   </style>
 </head>
 <body>
@@ -233,12 +244,6 @@
   <header>
     <h1>$DRIVE on PEPU</h1>
   </header>
-
-  <!-- Begrüßungsbox -->
-  <div class="intro-text">
-    <strong>When Ryan Gosling said, “I drive,” he meant straight to the MOON, baby! 🌕</strong><br><br>
-    Welcome to the official <span style="color: #ff007f;">$DRIVE</span> token page. This is a community-driven meme coin where we're all <span style="color: #ff007f;">Real Human Beings</span>!
-  </div>
 
   <!-- Button-Container (Telegram and Pumppad Buttons) -->
   <div class="button-container">
@@ -267,8 +272,8 @@
 
   <!-- Scroll-Pfeile -->
   <div class="scroll-arrows">
-    <img src="https://img.icons8.com/ios/50/ffffff/arrow.png" class="arrow" alt="Scroll Down Arrow">
-    <img src="https://img.icons8.com/ios/50/ffffff/arrow.png" class="arrow" alt="Scroll Down Arrow">
+    <span class="arrow-fat">&#8592;</span>
+    <span class="arrow-fat">&#8594;</span>
   </div>
 
   <!-- Our Escape Route Image -->
@@ -310,10 +315,10 @@
   </div>
 
   <!-- Audio Player -->
-  <audio id="audioPlayer" loop>
-  <source src="https://raw.githubusercontent.com/DRIVE-on-PEPU/pumppad/main/College%20&%20Electric%20Youth%20-%20A%20Real%20Hero%20(Drive%20Original%20Movie%20Soundtrack).mp3" type="audio/mp3">
-  Ihr Browser unterstützt das Audio-Element nicht.
-</audio>
+  <audio id="audioPlayer">
+    <source src="https://raw.githubusercontent.com/DRIVE-on-PEPU/pumppad/main/College%20&%20Electric%20Youth%20-%20A%20Real%20Hero%20(Drive%20Original%20Movie%20Soundtrack).mp3" type="audio/mp3">
+    Ihr Browser unterstützt das Audio-Element nicht.
+  </audio>
 
   <script>
     var audio = document.getElementById('audioPlayer');
@@ -322,6 +327,7 @@
 
     engineButton.addEventListener('click', function() {
       if (!isPlaying) {
+        audio.currentTime = 12; // Song starts at 12 seconds
         audio.play();
         engineButton.textContent = "CLICK HERE TO STOP ENGINE";
         isPlaying = true;
@@ -336,20 +342,20 @@
     });
 
     function scrollToBottomSmoothly() {
-  var scrollHeight = document.body.scrollHeight;
-  var currentScroll = window.scrollY;
-  var scrollStep = (scrollHeight - currentScroll) / 1000; // Sehr langsames Scrollen, sehr kleiner Schritt
+      var scrollHeight = document.body.scrollHeight;
+      var currentScroll = window.scrollY;
+      var scrollStep = (scrollHeight - currentScroll) / 5000; // Extremely slow scroll, very small step
 
-  function scrollStepFn() {
-    if (currentScroll < scrollHeight) {
-      currentScroll += scrollStep;
-      window.scrollTo(0, currentScroll);
+      function scrollStepFn() {
+        if (currentScroll < scrollHeight) {
+          currentScroll += scrollStep;
+          window.scrollTo(0, currentScroll);
+          requestAnimationFrame(scrollStepFn);
+        }
+      }
+
       requestAnimationFrame(scrollStepFn);
     }
-  }
-
-  requestAnimationFrame(scrollStepFn);
-}
   </script>
 
 </body>
