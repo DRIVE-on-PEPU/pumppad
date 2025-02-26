@@ -293,14 +293,18 @@ header .button img:hover {
   font-size: 3rem;
   font-weight: bold;
   color: white;
-  animation: arrowMove 1.5s infinite alternate; /* Linker Pfeil bewegt sich nach links */
+  position: relative;
+  left: -10px; /* Pfeil 10px weiter nach links verschieben */
+  animation: arrowMove 1.5s infinite alternate;
 }
 
 .arrow-right {
   font-size: 3rem;
   font-weight: bold;
   color: white;
-  animation: arrowMoveRight 1.5s infinite alternate; /* Rechter Pfeil bewegt sich nach rechts */
+  position: relative;
+  right: -10px; /* Pfeil 10px weiter nach rechts verschieben */
+  animation: arrowMoveRight 1.5s infinite alternate;
 }
 
 /* Blinke-Animation für Pfeile */
