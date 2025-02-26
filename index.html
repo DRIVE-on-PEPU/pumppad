@@ -26,6 +26,9 @@
       font-size: 3rem;
       font-family: 'Montserrat', sans-serif;
       color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .intro-text {
@@ -59,31 +62,55 @@
 
     .moon-logo {
       width: 400px;
+      position: relative;
+      top: -30px;
     }
 
-    .text-box {
-      margin-top: 50px;
+    .pulsing-box {
+      position: absolute;
+      right: 10%;
+      top: 20%;
+      background-color: #ff0000; /* Rote Farbe */
+      color: white;
       padding: 20px;
-      background: rgba(0, 0, 0, 0.6);
-      width: 80%;
-      text-align: center;
-      font-size: 1.1rem;
+      font-size: 2rem;
+      font-weight: bold;
       border-radius: 10px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+      text-align: center;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
+      animation: pulse 1.5s infinite; /* Pulsierende Animation */
+      transform: rotate(15deg); /* Schräg nach rechts geneigt */
+      cursor: pointer;
+      transition: transform 0.3s ease;
     }
 
-    .hover-text {
-      display: none;
-      padding: 15px;
-      background-color: #fff;
-      color: black;
-      font-size: 1rem;
-      border-radius: 5px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    .pulsing-box:hover {
+      transform: rotate(15deg) scale(1.1); /* Vergrößern bei Hover */
     }
 
-    .text-box:hover .hover-text {
-      display: block;
+    @keyframes pulse {
+      0% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.7;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    .scroll-arrows {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 40px;
+    }
+
+    .arrow {
+      width: 50px;
+      height: 50px;
+      transform: rotate(90deg);
     }
 
     .section-header {
@@ -98,6 +125,7 @@
       justify-content: space-between;
       gap: 20px;
       margin-top: 20px;
+      flex-wrap: wrap;
     }
 
     .small-box {
@@ -109,10 +137,13 @@
       font-size: 1.1rem;
       position: relative;
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      margin-bottom: 20px;
     }
 
-    .small-box:hover .hover-text {
-      display: block;
+    .small-box img {
+      width: 100px;
+      height: auto;
+      margin-bottom: 15px;
     }
 
     .button-container {
@@ -145,70 +176,78 @@
       vertical-align: middle;
       margin-right: 10px;
     }
+
+    .footer-text {
+      font-size: 1.2rem;
+      color: white;
+      text-align: center;
+      margin-top: 50px;
+    }
+
   </style>
 </head>
 <body>
 
-  <header>$DRIVE on PEPU Pumppad</header>
-
-  <div class="intro-text">
-    <strong>When Ryan Gosling said, “I drive,” he meant straight to the MOON, baby! 🌕</strong><br><br>
-    Welcome to the official $DRIVE token page. This is a <strong>community-driven</strong> meme coin, so get in the car!
-  </div>
+  <header>
+    <div class="intro-text">
+      <strong>When Ryan Gosling said, “I drive,” he meant straight to the MOON, baby! 🌕</strong><br><br>
+      Welcome to the official $DRIVE token page. This is a <strong>community-driven</strong> meme coin, so get in the car!
+      <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="pulsing-box">BUY NOW!</a>
+    </div>
+  </header>
 
   <img src="https://i.imgur.com/U5XaaPi.png" alt="Token Avatar" class="token-avatar">
 
   <img src="https://i.imgur.com/s1BSkhB.png" alt="Drive Logo" class="drive-logo">
   <img src="https://i.imgur.com/Von2iFS.png" alt="To the Moon Logo" class="moon-logo">
 
+  <div class="scroll-arrows">
+    <img src="https://img.icons8.com/ios/50/ffffff/arrow.png" class="arrow" alt="Scroll Down Arrow">
+    <img src="https://img.icons8.com/ios/50/ffffff/arrow.png" class="arrow" alt="Scroll Down Arrow">
+  </div>
+
   <hr>
 
-  <div class="text-box">
-    <div class="hover-text">
-      Hello community, this is Benjamin. I’m the token’s creator and an active community member. If you’ve been around $MATRIX or other projects, you might’ve seen my name before. I believe in PEPU and want it to succeed BIG TIME. But the flood of shitcoins and rugpulls launching on Pumppad hurts our ecosystem, so I want to contribute to a healthier platform by creating a positive and honest community for $DRIVE.
-    </div>
-    <strong>Who am I?</strong>
-  </div>
-
-  <div class="section-header">OUR ESCAPE ROUTE 🚗</div>
+  <div class="section-header">OUR ESCAPE ROUTE</div>
+  <img src="https://imgur.com/gNkRjrs.png" alt="Escape Route Image" style="width: 80%; margin-top: 20px;">
 
   <div class="box-container">
     <div class="small-box">
-      <strong>$DRIVE</strong>
-      <div class="hover-text">A community token inspired by Drive.</div>
+      <img src="https://i.imgur.com/UZ1dgL7.png" alt="Community">
+      <strong>Community</strong>
     </div>
     <div class="small-box">
+      <img src="https://i.imgur.com/akEr7Ex.png" alt="Purpose">
       <strong>Purpose</strong>
-      <div class="hover-text">This is a simple, honest meme coin with no gimmicks.</div>
     </div>
     <div class="small-box">
-      <strong>Our Promise</strong>
-      <div class="hover-text">The only promise is that we help each other and be good to each other.</div>
+      <img src="https://i.imgur.com/h01H3Tn.png" alt="Promise">
+      <strong>Promise</strong>
     </div>
   </div>
 
   <div class="box-container">
     <div class="small-box">
+      <img src="https://i.imgur.com/b2a9Qd5.png" alt="Honesty">
       <strong>Honesty</strong>
-      <div class="hover-text">No rugpulls, no lies. We’re here for the long run.</div>
     </div>
     <div class="small-box">
-      <strong>We are the Whale!</strong>
-      <div class="hover-text">We hold, don’t panic sell, buy dips. We decide the price.</div>
+      <img src="https://i.imgur.com/YpGmi6q.png" alt="Power">
+      <strong>Power</strong>
     </div>
     <div class="small-box">
-      <strong>Responsibility</strong>
-      <div class="hover-text">Only spend what you can afford. Don’t gamble your livelihood.</div>
+      <img src="https://i.imgur.com/6Dkd9ps.png" alt="Wisdom">
+      <strong>Wisdom</strong>
     </div>
   </div>
 
-  <div class="text-box">
-    This project is entirely community-driven, so it's important that you join our Telegram and contribute to this amazing ride.
+  <div class="footer-text">
+    If you haven't seen the film, do so, it's amazing.
   </div>
 
   <div class="button-container">
-    <a href="https://t.me/YOUR_TELEGRAM_LINK" class="button"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/telegram-white-icon.png" alt="Telegram">Join Telegram</a>
-    <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYihq0lVLoSaPDfuQdCbOFmXTmooWC_5CCNA&s" alt="Pumppad">Buy on Pumppad</a>
+    <a href="https://t.me/YOUR_TELEGRAM_LINK" class="button"><img src="https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/telegram-white-icon.png" alt="Telegram"></a>
+    <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="button"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTYihq0lVLoSaPDfuQdCbOFmXTmooWC_5CCNA&s" alt="Pumppad"></a>
   </div>
 
 </body>
