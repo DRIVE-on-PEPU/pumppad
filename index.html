@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Montserrat:wght@700&display=swap" rel="stylesheet">
   <style>
     body {
-      background: linear-gradient(135deg, #ff007f, #ffcc00); /* Neon pink and gold */
+      background: linear-gradient(135deg, #ff007f, #1c1c1c); /* Neonpink to dark gray/black for a noir feel */
       background-size: cover;
       font-family: 'Roboto', sans-serif;
       color: white;
@@ -21,7 +21,7 @@
     header {
       width: 100%;
       text-align: center;
-      padding: 20px 0;
+      padding: 40px 0;
       background: rgba(0, 0, 0, 0.6); /* Dark overlay for header */
       font-size: 3rem;
       font-family: 'Montserrat', sans-serif;
@@ -29,21 +29,21 @@
     }
 
     .intro-text {
-      background: rgba(0, 0, 0, 0.4);
-      padding: 20px;
-      border-radius: 10px;
+      background: rgba(0, 0, 0, 0.7); /* Darker background to make the text stand out more */
+      padding: 30px;
+      border-radius: 15px;
       width: 80%;
       margin-top: 30px;
       text-align: center;
       font-size: 1.2rem;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
     }
 
     .button-container {
       display: flex;
       justify-content: center;
       gap: 20px;
-      margin-top: 20px;
+      margin-top: 30px;
     }
 
     .button {
@@ -52,28 +52,22 @@
       text-decoration: none;
       font-weight: bold;
       text-align: center;
-      transition: transform 0.3s ease;
-    }
-
-    .button-telegram {
-      background: #ff007f;
-      color: white;
-    }
-
-    .button-pumppad {
-      background: #ffcc00;
-      color: black;
+      transition: transform 0.3s ease, color 0.3s ease;
+      color: #ffd700; /* Gold color for the text */
+      background-color: white;
+      border: 2px solid #ffd700;
     }
 
     .button:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
+      color: #ff007f; /* Neonpink on hover */
     }
 
     .token-avatar {
-      width: 150px;
-      height: 150px;
+      width: 400px; /* Four times bigger */
+      height: 400px;
       border-radius: 50%;
-      margin-top: 30px;
+      margin-top: 40px;
       border: 5px solid #fff;
     }
   </style>
@@ -89,8 +83,8 @@
   </div>
 
   <div class="button-container">
-    <a href="https://t.me/YOUR_TELEGRAM_LINK" class="button button-telegram">🚀 Join Telegram</a>
-    <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="button button-pumppad">💰 Buy on Pumppad</a>
+    <a href="https://t.me/YOUR_TELEGRAM_LINK" class="button">🚀 Join Telegram</a>
+    <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="button">💰 Buy on Pumppad</a>
   </div>
 
   <img src="https://i.imgur.com/U5XaaPi.png" alt="Token Avatar" class="token-avatar">
