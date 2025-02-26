@@ -117,8 +117,25 @@ header {
   top: calc(20% + 500px); /* 500px weiter unten */
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  animation: pulse 1.5s infinite; /* Pulsierende Animation */
-  transform: rotate(20deg); /* Standardmäßige Rotation */
+  animation: pulse-tilted 1.5s infinite; /* Neue pulsierende Animation */
+  transform: rotate(30deg); /* Standardmäßige Rotation um 30 Grad */
+}
+
+@keyframes pulse-tilted {
+  0% {
+    transform: scale(1) rotate(30deg);
+  }
+  50% {
+    transform: scale(1.15) rotate(30deg); /* Vergrößern + beibehalten der Rotation */
+  }
+  100% {
+    transform: scale(1) rotate(30deg);
+  }
+}
+
+.buy-now-button:hover {
+  transform: scale(1.1) rotate(30deg);
+  background-color: #ff007f;
 }
 
 .buy-now-button:hover {
