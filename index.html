@@ -156,15 +156,34 @@ header {
   margin-top: 50px; /* Erhöht den Abstand nach unten */
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Default Button Styling */
 #engineButton {
   background-color: #ff66b2;
   color: white;
-  font-size: 2rem; /* Button größer */
-  padding: 25px 40px; /* Größere Klickfläche */
-  border-radius: 15px;
+  font-size: 1.5rem;
+  padding: 20px;
+  border-radius: 10px;
   border: none;
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition: transform 0.3s ease;
+  margin-top: 120px;
+}
+
+/* Add this class for pulsating effect */
+.pulsating {
+  animation: pulse 1.5s infinite;
 }
 
 #engineButton:hover {
@@ -421,6 +440,7 @@ engineButton.addEventListener('click', function() {
     audio.volume = 0.15; // Lautstärke auf 25% setzen
     audio.play();
     engineButton.textContent = "CLICK HERE TO STOP ENGINE";
+    engineButton.classList.remove("pulsating"); // Stop pulsating when stopping
     isPlaying = true;
 
     // Langsame Scroll-Animation starten
@@ -428,12 +448,18 @@ engineButton.addEventListener('click', function() {
   } else {
     audio.pause();
     engineButton.textContent = "CLICK HERE TO LAUNCH ENGINE";
+    engineButton.classList.add("pulsating"); // Start pulsating when launching
     isPlaying = false;
 
     // Scrollen stoppen, wenn der Button erneut gedrückt wird
     cancelAnimationFrame(scrollAnimationFrameId);
   }
 });
+
+// Start with pulsating effect
+window.onload = function() {
+  engineButton.classList.add("pulsating");
+};
 
 // Funktion für langsames Scrollen
 function scrollToBottomSmoothly() {
