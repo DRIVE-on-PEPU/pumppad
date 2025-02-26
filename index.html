@@ -349,7 +349,7 @@ engineButton.addEventListener('click', function() {
 function scrollToBottomSmoothly() {
   var scrollHeight = document.body.scrollHeight;
   var currentScroll = window.scrollY;
-  var scrollStep = (scrollHeight - currentScroll) / 5000; // Sehr langsames Scrollen, sehr kleiner Schritt
+  var scrollStep = (scrollHeight - currentScroll) / 3000; // Sehr langsames Scrollen, sehr kleiner Schritt
 
   function scrollStepFn() {
     if (currentScroll < scrollHeight) {
