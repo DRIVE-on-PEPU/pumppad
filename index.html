@@ -57,6 +57,18 @@
     }
 
     /* BUY NOW! Button */
+@keyframes pulse {
+  0% {
+    transform: scale(1) rotate(20deg);
+  }
+  50% {
+    transform: scale(1.1) rotate(20deg); /* Button wächst leicht */
+  }
+  100% {
+    transform: scale(1) rotate(20deg);
+  }
+}
+
 .buy-now-button {
   background-color: #ff0000;
   color: white;
@@ -65,16 +77,16 @@
   padding: 30px;
   border-radius: 10px;
   text-align: center;
-  transform: rotate(20deg); /* Further tilted */
   position: absolute;
-  left: calc(50% + 200px); /* Platziert den Button 250px rechts von der Mitte */
+  left: calc(50% + 250px); /* Platziert den Button 200px rechts von der Mitte */
   top: calc(20% + 125px); /* Verschiebt den Button um 125px nach unten */
   cursor: pointer;
   transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: pulse 1.5s infinite; /* Pulsierende Animation */
 }
 
     .buy-now-button:hover {
-      transform: rotate(20deg) scale(1.1);
+      transform: rotate(25deg) scale(1.1);
       background-color: #ff007f;
     }
 
