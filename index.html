@@ -33,6 +33,41 @@ header {
   position: relative;
 }
 
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* New BUY NOW! Button at the Bottom */
+.buy-now-bottom-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px; /* Space above */
+  margin-bottom: 40px; /* Space before footer */
+}
+
+.buy-now-bottom-button {
+  background-color: #ff0000;
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  padding: 20px 40px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  animation: pulse 1.5s infinite; /* Pulsating effect */
+  text-decoration: none;
+}
+
+    
     /* Überschrift im Header */
     header h1 {
       font-size: 4.5rem;
@@ -358,6 +393,11 @@ header .button img:hover {
     </div>
   </div>
 
+<!-- BUY NOW! Button at the Bottom -->
+<div class="buy-now-bottom-container">
+  <a href="https://pumppad.pepu/YOUR_TOKEN_ADDRESS" class="buy-now-bottom-button">BUY NOW!</a>
+</div>
+  
   <!-- Footer-Text -->
   <div class="footer-text">
     Directed by Pepe Unchained.
