@@ -1,5 +1,3 @@
-# $DRIVE on PEPU Pumppad 🚗💨  
-
 Welcome to the official **$DRIVE** token page, inspired by the legendary film *Drive* (2011). This is a **community-driven** meme, so get in the car!  
 
 ---
