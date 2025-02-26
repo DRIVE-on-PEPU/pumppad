@@ -177,18 +177,19 @@ header {
       }
     }
 
-/* Container für die Pfeile + Engine-Button */
-.engine-container {
+/* Pfeile oberhalb des Engine-Buttons positionieren */
+.engine-arrows {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* Abstand zwischen Pfeilen und Button */
-  margin-top: 50px; /* Abstand zum Header */
+  gap: 40px; /* Abstand zwischen den Pfeilen */
+  margin-bottom: 10px;
+  margin-top: -40px; /* Pfeile weiter nach oben rücken */
 }
 
-/* Pfeile links und rechts */
+/* Pfeil-Styling */
 .arrow-left, .arrow-right {
-  font-size: 3rem; /* Größe der Pfeile */
+  font-size: 3rem;
   font-weight: bold;
   color: white;
   animation: arrowBlink 1.5s infinite alternate;
@@ -308,12 +309,12 @@ header {
   <!-- To the Moon Logo -->
   <img src="https://i.imgur.com/Von2iFS.png" alt="To the Moon Logo" class="moon-logo">
 
-<!-- Pfeile + Engine-Button in einer flexiblen Zeile -->
-<div class="engine-container">
-    <span class="arrow-left">&#8592;</span> <!-- Pfeil links -->
-    <button id="engineButton">CLICK HERE TO LAUNCH ENGINE</button>
-    <span class="arrow-right">&#8594;</span> <!-- Pfeil rechts -->
+<!-- Pfeile zeigen auf den bestehenden Engine-Button unter dem Header -->
+<div class="engine-arrows">
+    <span class="arrow-left">&#8592;</span>
+    <span class="arrow-right">&#8594;</span>
 </div>
+
 
   <!-- Our Escape Route Image -->
   <div class="section-header">
